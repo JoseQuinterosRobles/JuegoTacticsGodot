@@ -1,0 +1,1159 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_02w0p"]
+
+[resource]
+script = ExtResource("1_02w0p")
+using_states = PackedStringArray()
+titles = {
+"preguntas": "25",
+"start": "1"
+}
+character_names = PackedStringArray("Sistema")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Sistema",
+&"id": "1",
+&"next_id": "2",
+&"text": "Este juego es un piloto",
+&"type": "dialogue"
+},
+"10": {
+&"character": "Sistema",
+&"id": "10",
+&"next_id": "11",
+&"text": "los dados mas altos, la cantidad de dados guardados es igual a tu atributo",
+&"type": "dialogue"
+},
+"11": {
+&"character": "Sistema",
+&"id": "11",
+&"next_id": "12",
+&"text": "Ejemplo: quieres romper una puerta.",
+&"type": "dialogue"
+},
+"12": {
+&"character": "Sistema",
+&"id": "12",
+&"next_id": "13",
+&"text": "si tu actitud fisica es 2 y tu habilidad de proeza de fuerza 2 lanzaras 4 dados y elegiras los dos mas altos,",
+&"type": "dialogue"
+},
+"13": {
+&"character": "Sistema",
+&"id": "13",
+&"next_id": "18",
+&"text": "si los dados lanzados son 5,8,2,1 sumaras 13 (8+5)",
+&"type": "dialogue"
+},
+"14": {
+&"id": "14",
+&"next_id": "15",
+&"type": ""
+},
+"15": {
+&"id": "15",
+&"next_id": "16",
+&"text": "no",
+&"type": "response"
+},
+"16": {
+&"character": "Sistema",
+&"id": "16",
+&"next_id": "18",
+&"text": "Entonces comensemos con la encuesta",
+&"type": "dialogue"
+},
+"17": {
+&"id": "17",
+&"next_id": "18",
+&"type": ""
+},
+"18": {
+&"character": "Sistema",
+&"id": "18",
+&"next_id": "19",
+&"text": "Primero ¿cual es tu nombre?",
+&"type": "dialogue"
+},
+"19": {
+&"id": "19",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "abrir_input_nombre",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 22,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "21",
+&"type": "mutation"
+},
+"2": {
+&"character": "Sistema",
+&"id": "2",
+&"next_id": "3",
+&"text": "El sistema de juegos es una aventura grafica que cuenta con minijuegos",
+&"type": "dialogue"
+},
+"20": {
+&"id": "20",
+&"next_id": "21",
+&"type": ""
+},
+"21": {
+&"id": "21",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"23": {
+&"id": "23",
+&"next_id": "24",
+&"type": ""
+},
+"24": {
+&"id": "24",
+&"next_id": "25",
+&"type": "title"
+},
+"25": {
+&"character": "Sistema",
+&"id": "25",
+&"next_id": "27",
+&"text": "Mucho gusto joven {{Autoload.nombre_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 29,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 37,
+&"type": &"dot"
+}, {
+&"i": 38,
+&"type": &"variable",
+&"value": "nombre_jugador"
+}]),
+&"value_in_text": "{{Autoload.nombre_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"26": {
+&"id": "26",
+&"next_id": "27",
+&"type": ""
+},
+"27": {
+&"character": "Sistema",
+&"id": "27",
+&"next_id": "28",
+&"text": "Vas caminando por la calle y un bandido te quiere robar, ¿como enfrentarias esa situación?",
+&"type": "dialogue"
+},
+"28": {
+&"id": "28",
+&"next_id": "29",
+&"responses": PackedStringArray("28", "32", "36", "40"),
+&"text": "me defiendo y peleo con el",
+&"type": "response"
+},
+"29": {
+&"character": "Sistema",
+&"id": "29",
+&"next_id": "30",
+&"text": "Confias en tus musculos eh?",
+&"type": "dialogue"
+},
+"3": {
+&"character": "Sistema",
+&"id": "3",
+&"next_id": "4",
+&"text": "deciciones y combates tacticos",
+&"type": "dialogue"
+},
+"30": {
+&"id": "30",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_atributo_principal",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 28,
+&"type": &"string",
+&"value": "cuerpo"
+}, {
+&"i": 36,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "31",
+&"type": "mutation"
+},
+"31": {
+&"character": "Sistema",
+&"id": "31",
+&"next_id": "46",
+&"text": "Tu atributo cuerpo subio a {{Autoload.cuerpo}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 39,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 47,
+&"type": &"dot"
+}, {
+&"i": 48,
+&"type": &"variable",
+&"value": "cuerpo"
+}]),
+&"value_in_text": "{{Autoload.cuerpo}}"
+}]),
+&"type": "dialogue"
+},
+"32": {
+&"id": "32",
+&"next_id": "33",
+&"text": "lo engaño y me desago de el",
+&"type": "response"
+},
+"33": {
+&"character": "Sistema",
+&"id": "33",
+&"next_id": "34",
+&"text": "Debes tener una mente agil para engañar en una situación asi",
+&"type": "dialogue"
+},
+"34": {
+&"id": "34",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_atributo_principal",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 28,
+&"type": &"string",
+&"value": "mente"
+}, {
+&"i": 35,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "35",
+&"type": "mutation"
+},
+"35": {
+&"character": "Sistema",
+&"id": "35",
+&"next_id": "46",
+&"text": "Tu atributo mente subio a {{Autoload.mente}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 38,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 46,
+&"type": &"dot"
+}, {
+&"i": 47,
+&"type": &"variable",
+&"value": "mente"
+}]),
+&"value_in_text": "{{Autoload.mente}}"
+}]),
+&"type": "dialogue"
+},
+"36": {
+&"id": "36",
+&"next_id": "37",
+&"text": "lo convenzo de que no llevo nada",
+&"type": "response"
+},
+"37": {
+&"character": "Sistema",
+&"id": "37",
+&"next_id": "38",
+&"text": "Debes tener una gran labia para algo asi, pero lo veo posible",
+&"type": "dialogue"
+},
+"38": {
+&"id": "38",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_atributo_principal",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 28,
+&"type": &"string",
+&"value": "mente"
+}, {
+&"i": 35,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "39",
+&"type": "mutation"
+},
+"39": {
+&"character": "Sistema",
+&"id": "39",
+&"next_id": "46",
+&"text": "Tu atributo mente subio a {{Autoload.mente}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 38,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 46,
+&"type": &"dot"
+}, {
+&"i": 47,
+&"type": &"variable",
+&"value": "mente"
+}]),
+&"value_in_text": "{{Autoload.mente}}"
+}]),
+&"type": "dialogue"
+},
+"4": {
+&"character": "Sistema",
+&"id": "4",
+&"next_id": "5",
+&"text": "¿Quieres la explicación con detalles?",
+&"type": "dialogue"
+},
+"40": {
+&"id": "40",
+&"next_id": "41",
+&"text": "busco ayudarlo a encontrar el camino",
+&"type": "response"
+},
+"41": {
+&"character": "Sistema",
+&"id": "41",
+&"next_id": "42",
+&"text": "No esperaba esa respuesta",
+&"type": "dialogue"
+},
+"42": {
+&"id": "42",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_atributo_principal",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 28,
+&"type": &"string",
+&"value": "alma"
+}, {
+&"i": 34,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "43",
+&"type": "mutation"
+},
+"43": {
+&"character": "Sistema",
+&"id": "43",
+&"next_id": "46",
+&"text": "Tu atributo alma subio a {{Autoload.alma}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 37,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 45,
+&"type": &"dot"
+}, {
+&"i": 46,
+&"type": &"variable",
+&"value": "alma"
+}]),
+&"value_in_text": "{{Autoload.alma}}"
+}]),
+&"type": "dialogue"
+},
+"45": {
+&"id": "45",
+&"next_id": "46",
+&"type": ""
+},
+"46": {
+&"character": "Sistema",
+&"id": "46",
+&"next_id": "47",
+&"text": "Estas en una colina, disfrutando la vista. ¿que ves?",
+&"type": "dialogue"
+},
+"47": {
+&"id": "47",
+&"next_id": "48",
+&"responses": PackedStringArray("47", "51", "55", "59", "63"),
+&"text": "Un campo de batalla",
+&"type": "response"
+},
+"48": {
+&"character": "Sistema",
+&"id": "48",
+&"next_id": "49",
+&"text": "Estas deseoso de demostrar tu valia",
+&"type": "dialogue"
+},
+"49": {
+&"id": "49",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_habilidad",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 19,
+&"type": &"string",
+&"value": "proezaFuerza"
+}, {
+&"i": 33,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "50",
+&"type": "mutation"
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"responses": PackedStringArray("5", "15"),
+&"text": "si",
+&"type": "response"
+},
+"50": {
+&"character": "Sistema",
+&"id": "50",
+&"next_id": "68",
+&"text": "Tu habilidad de proeza de fuera subio a {{Autoload.proezaFuerza}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 52,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 60,
+&"type": &"dot"
+}, {
+&"i": 61,
+&"type": &"variable",
+&"value": "proezaFuerza"
+}]),
+&"value_in_text": "{{Autoload.proezaFuerza}}"
+}]),
+&"type": "dialogue"
+},
+"51": {
+&"id": "51",
+&"next_id": "52",
+&"text": "Un mundo del cual aprender",
+&"type": "response"
+},
+"52": {
+&"character": "Sistema",
+&"id": "52",
+&"next_id": "53",
+&"text": "Una persona curiosa, cada día deberiamos aprender algo nuevo",
+&"type": "dialogue"
+},
+"53": {
+&"id": "53",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_habilidad",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 19,
+&"type": &"string",
+&"value": "conocimientos"
+}, {
+&"i": 34,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "54",
+&"type": "mutation"
+},
+"54": {
+&"character": "Sistema",
+&"id": "54",
+&"next_id": "68",
+&"text": "Tu habilidad de conocimientos subio a {{Autoload.conocimientos}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 50,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 58,
+&"type": &"dot"
+}, {
+&"i": 59,
+&"type": &"variable",
+&"value": "conocimientos"
+}]),
+&"value_in_text": "{{Autoload.conocimientos}}"
+}]),
+&"type": "dialogue"
+},
+"55": {
+&"id": "55",
+&"next_id": "56",
+&"text": "Personas disfrutando su dia",
+&"type": "response"
+},
+"56": {
+&"character": "Sistema",
+&"id": "56",
+&"next_id": "57",
+&"text": "Siempre esta bien disfrutar el dia",
+&"type": "dialogue"
+},
+"57": {
+&"id": "57",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_habilidad",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 19,
+&"type": &"string",
+&"value": "labia"
+}, {
+&"i": 26,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "58",
+&"type": "mutation"
+},
+"58": {
+&"character": "Sistema",
+&"id": "58",
+&"next_id": "68",
+&"text": "Tu habilidad de labia subio a {{Autoload.labia}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 42,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 50,
+&"type": &"dot"
+}, {
+&"i": 51,
+&"type": &"variable",
+&"value": "labia"
+}]),
+&"value_in_text": "{{Autoload.labia}}"
+}]),
+&"type": "dialogue"
+},
+"59": {
+&"id": "59",
+&"next_id": "60",
+&"text": "Una carnaval para jugar",
+&"type": "response"
+},
+"6": {
+&"character": "Sistema",
+&"id": "6",
+&"next_id": "7",
+&"text": "Cuenta con un sistema de dados de 10 caras.",
+&"type": "dialogue"
+},
+"60": {
+&"character": "Sistema",
+&"id": "60",
+&"next_id": "61",
+&"text": "Espero hayas ganado algun premio en los juegos",
+&"type": "dialogue"
+},
+"61": {
+&"id": "61",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_habilidad",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 19,
+&"type": &"string",
+&"value": "DestrezaManual"
+}, {
+&"i": 35,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "62",
+&"type": "mutation"
+},
+"62": {
+&"character": "Sistema",
+&"id": "62",
+&"next_id": "68",
+&"text": "Tu habilidad de DestrezaManual subio a {{Autoload.DestrezaManual}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 51,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 59,
+&"type": &"dot"
+}, {
+&"i": 60,
+&"type": &"variable",
+&"value": "DestrezaManual"
+}]),
+&"value_in_text": "{{Autoload.DestrezaManual}}"
+}]),
+&"type": "dialogue"
+},
+"63": {
+&"id": "63",
+&"next_id": "64",
+&"text": "Un misterio por resolver",
+&"type": "response"
+},
+"64": {
+&"id": "64",
+&"next_id": "65",
+&"text": "Sistema:¡La aventura y la curiosidad la razón de ser de un aventurero!",
+&"type": "dialogue"
+},
+"65": {
+&"id": "65",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "subir_habilidad",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 19,
+&"type": &"string",
+&"value": "percepcion"
+}, {
+&"i": 31,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "66",
+&"type": "mutation"
+},
+"66": {
+&"character": "Sistema",
+&"id": "66",
+&"next_id": "68",
+&"text": "Tu habilidad de percepcion subio a {{Autoload.percepcion}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 47,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 55,
+&"type": &"dot"
+}, {
+&"i": 56,
+&"type": &"variable",
+&"value": "percepcion"
+}]),
+&"value_in_text": "{{Autoload.percepcion}}"
+}]),
+&"type": "dialogue"
+},
+"67": {
+&"id": "67",
+&"next_id": "68",
+&"type": ""
+},
+"68": {
+&"character": "Sistema",
+&"id": "68",
+&"next_id": "69",
+&"text": "Última pregunta. ¿A que raza perteneces?",
+&"type": "dialogue"
+},
+"69": {
+&"id": "69",
+&"next_id": "70",
+&"responses": PackedStringArray("69", "72", "75", "78", "81", "84"),
+&"text": "Humano",
+&"type": "response"
+},
+"7": {
+&"character": "Sistema",
+&"id": "7",
+&"next_id": "8",
+&"text": "Ciertas acciones pediran una tirada de dados con una dificultad",
+&"type": "dialogue"
+},
+"70": {
+&"id": "70",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Humano"
+}, {
+&"i": 24,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "71",
+&"type": "mutation"
+},
+"71": {
+&"character": "Sistema",
+&"id": "71",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"72": {
+&"id": "72",
+&"next_id": "73",
+&"text": "Hombre bestia",
+&"type": "response"
+},
+"73": {
+&"id": "73",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Hombre bestia"
+}, {
+&"i": 31,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "74",
+&"type": "mutation"
+},
+"74": {
+&"character": "Sistema",
+&"id": "74",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"75": {
+&"id": "75",
+&"next_id": "76",
+&"text": "Elfo",
+&"type": "response"
+},
+"76": {
+&"id": "76",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Elfo"
+}, {
+&"i": 22,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "77",
+&"type": "mutation"
+},
+"77": {
+&"character": "Sistema",
+&"id": "77",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"78": {
+&"id": "78",
+&"next_id": "79",
+&"text": "Semi elfo",
+&"type": "response"
+},
+"79": {
+&"id": "79",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Semi elfo"
+}, {
+&"i": 27,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "80",
+&"type": "mutation"
+},
+"8": {
+&"character": "Sistema",
+&"id": "8",
+&"next_id": "9",
+&"text": "Al lanzar los dados tus atributos y nivel de habilidad se sumaran",
+&"type": "dialogue"
+},
+"80": {
+&"character": "Sistema",
+&"id": "80",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"81": {
+&"id": "81",
+&"next_id": "82",
+&"text": "Demonio",
+&"type": "response"
+},
+"82": {
+&"id": "82",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Demonio"
+}, {
+&"i": 25,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "83",
+&"type": "mutation"
+},
+"83": {
+&"character": "Sistema",
+&"id": "83",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"84": {
+&"id": "84",
+&"next_id": "85",
+&"text": "Enano",
+&"type": "response"
+},
+"85": {
+&"id": "85",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "asignar_raza",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"string",
+&"value": "Enano"
+}, {
+&"i": 23,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "86",
+&"type": "mutation"
+},
+"86": {
+&"character": "Sistema",
+&"id": "86",
+&"next_id": "87",
+&"text": "Tu raza es {{Autoload.raza_jugador}}",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 23,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 31,
+&"type": &"dot"
+}, {
+&"i": 32,
+&"type": &"variable",
+&"value": "raza_jugador"
+}]),
+&"value_in_text": "{{Autoload.raza_jugador}}"
+}]),
+&"type": "dialogue"
+},
+"87": {
+&"character": "Sistema",
+&"id": "87",
+&"next_id": "88",
+&"text": "Con todo esto, te doy la bienvenida a esta aventura, tu inicio ser la ciudad de Sarin",
+&"type": "dialogue"
+},
+"88": {
+&"id": "88",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "inicio",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 10,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "89",
+&"type": "mutation"
+},
+"89": {
+&"id": "89",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"9": {
+&"character": "Sistema",
+&"id": "9",
+&"next_id": "10",
+&"text": "a la cantidad de dados que lanzas, pero solo se sumaran",
+&"type": "dialogue"
+}
+}
+raw_text = "~ start
+Sistema: Este juego es un piloto
+Sistema: El sistema de juegos es una aventura grafica que cuenta con minijuegos
+Sistema: deciciones y combates tacticos
+Sistema: ¿Quieres la explicación con detalles?
+- si
+	Sistema: Cuenta con un sistema de dados de 10 caras.
+	Sistema: Ciertas acciones pediran una tirada de dados con una dificultad
+	Sistema: Al lanzar los dados tus atributos y nivel de habilidad se sumaran
+	Sistema: a la cantidad de dados que lanzas, pero solo se sumaran
+	Sistema: los dados mas altos, la cantidad de dados guardados es igual a tu atributo
+	Sistema: Ejemplo: quieres romper una puerta. 
+	Sistema: si tu actitud fisica es 2 y tu habilidad de proeza de fuerza 2 lanzaras 4 dados y elegiras los dos mas altos,
+	Sistema: si los dados lanzados son 5,8,2,1 sumaras 13 (8+5)
+	
+- no
+	Sistema: Entonces comensemos con la encuesta
+
+Sistema: Primero ¿cual es tu nombre?
+do abrir_input_nombre()
+# Aquí el diálogo termina momentáneamente mientras el usuario escribe
+=> END
+
+
+~ preguntas
+Sistema: Mucho gusto joven {{Autoload.nombre_jugador}}
+
+Sistema: Vas caminando por la calle y un bandido te quiere robar, ¿como enfrentarias esa situación?
+- me defiendo y peleo con el
+	Sistema: Confias en tus musculos eh?
+	do subir_atributo_principal(\"cuerpo\")
+	Sistema: Tu atributo cuerpo subio a {{Autoload.cuerpo}}
+- lo engaño y me desago de el
+	Sistema: Debes tener una mente agil para engañar en una situación asi
+	do subir_atributo_principal(\"mente\")
+	Sistema: Tu atributo mente subio a {{Autoload.mente}}
+- lo convenzo de que no llevo nada
+	Sistema: Debes tener una gran labia para algo asi, pero lo veo posible
+	do subir_atributo_principal(\"mente\")
+	Sistema: Tu atributo mente subio a {{Autoload.mente}}
+- busco ayudarlo a encontrar el camino
+	Sistema: No esperaba esa respuesta
+	do subir_atributo_principal(\"alma\")
+	Sistema: Tu atributo alma subio a {{Autoload.alma}}
+
+
+Sistema: Estas en una colina, disfrutando la vista. ¿que ves?
+- Un campo de batalla
+	Sistema: Estas deseoso de demostrar tu valia
+	do subir_habilidad(\"proezaFuerza\")
+	Sistema: Tu habilidad de proeza de fuera subio a {{Autoload.proezaFuerza}}
+- Un mundo del cual aprender
+	Sistema: Una persona curiosa, cada día deberiamos aprender algo nuevo
+	do subir_habilidad(\"conocimientos\")
+	Sistema: Tu habilidad de conocimientos subio a {{Autoload.conocimientos}}
+- Personas disfrutando su dia
+	Sistema: Siempre esta bien disfrutar el dia
+	do subir_habilidad(\"labia\")
+	Sistema: Tu habilidad de labia subio a {{Autoload.labia}}
+- Una carnaval para jugar
+	Sistema: Espero hayas ganado algun premio en los juegos
+	do subir_habilidad(\"DestrezaManual\")
+	Sistema: Tu habilidad de DestrezaManual subio a {{Autoload.DestrezaManual}}
+- Un misterio por resolver
+	Sistema:¡La aventura y la curiosidad la razón de ser de un aventurero!
+	do subir_habilidad(\"percepcion\")
+	Sistema: Tu habilidad de percepcion subio a {{Autoload.percepcion}}
+
+Sistema: Última pregunta. ¿A que raza perteneces?
+- Humano
+	do asignar_raza(\"Humano\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Hombre bestia
+	do asignar_raza(\"Hombre bestia\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Elfo
+	do asignar_raza(\"Elfo\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Semi elfo
+	do asignar_raza(\"Semi elfo\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Demonio
+	do asignar_raza(\"Demonio\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Enano
+	do asignar_raza(\"Enano\")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+Sistema: Con todo esto, te doy la bienvenida a esta aventura, tu inicio ser la ciudad de Sarin
+do inicio()"
+metadata/dialogue_manager_version = "3.9.1"

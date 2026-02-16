@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://nupgjjmfrfc7"]
+
+[ext_resource type="Texture2D" uid="uid://bo87tj0cwwtej" path="res://img/interfaz cutre (1).png" id="1_1efxi"]
+
+[node name="InterfazPrincipal" type="Control" unique_id=2118313464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=37690220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1efxi")
+expand_mode = 1
+
+[node name="btnConfig" type="Button" parent="." unique_id=419841879]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 49.0
+offset_bottom = 41.0
+
+[node name="brnHojaPersonaje" type="Button" parent="." unique_id=952535043]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 68.0
+offset_right = 52.0
+offset_bottom = 101.0
+
+[node name="btnMapas" type="Button" parent="." unique_id=1913642522]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 104.0
+offset_right = 52.0
+offset_bottom = 137.0
+
+[node name="btnEquipo" type="Button" parent="." unique_id=1848344576]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 178.0
+offset_right = 50.0
+offset_bottom = 206.0
+
+[node name="btnInventario" type="Button" parent="." unique_id=1753918040]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 140.0
+offset_right = 52.0
+offset_bottom = 172.0

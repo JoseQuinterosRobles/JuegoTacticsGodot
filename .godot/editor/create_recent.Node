@@ -1,0 +1,15 @@
+Area2D
+Sprite2D
+Node2D
+CollisionShape2D
+CharacterBody2D
+TileMapLayer
+ColorRect
+Button
+VBoxContainer
+TextureRect
+AnimatableBody2D
+Control
+CanvasLayer
+TileMap
+Label

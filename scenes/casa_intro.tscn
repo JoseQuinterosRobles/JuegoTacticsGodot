@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cflwgiijwwyhc"]
+
+[ext_resource type="Texture2D" uid="uid://sk0ucgcg4maj" path="res://img/dormitorioPj.png" id="1_6hinc"]
+[ext_resource type="Script" uid="uid://b2rl76pdflail" path="res://scripts/casa_intro.gd" id="1_6lkei"]
+[ext_resource type="PackedScene" uid="uid://cvg3ostnti6mi" path="res://scenes/ui_topbar.tscn" id="2_rkwki"]
+[ext_resource type="AudioStream" uid="uid://dlg3phfnuvba" path="res://music/casa.mp3" id="4_75gpr"]
+
+[node name="CasaIntro" type="Control" unique_id=1416309016 node_paths=PackedStringArray("_menu_salir", "_bloqueo", "Samir")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6lkei")
+topbar_scene = ExtResource("2_rkwki")
+_menu_salir = NodePath("FiltroBloqueo/VBoxContainer")
+_bloqueo = NodePath("FiltroBloqueo")
+Samir = NodePath("")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1243366741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6hinc")
+expand_mode = 1
+
+[node name="btnPuerta" type="Button" parent="." unique_id=599935481]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.4925
+anchor_top = -0.43333334
+anchor_right = -0.4925
+anchor_bottom = -0.43333334
+offset_left = 837.0
+offset_top = 172.0
+offset_right = 1055.0
+offset_bottom = 520.0
+metadata/_edit_use_anchors_ = true
+
+[node name="btnCofre" type="Button" parent="." unique_id=1911995653]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -102.0
+offset_right = 73.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="btnCama" type="Button" parent="." unique_id=1345210203]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13625
+anchor_top = 0.80222225
+anchor_right = 0.48875
+anchor_bottom = 0.8066667
+offset_top = -102.0
+offset_right = 73.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="FiltroBloqueo" type="Control" parent="." unique_id=1502331047]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FiltroBloqueo" unique_id=1401269485]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.25
+offset_top = -52.75
+offset_right = 90.25
+offset_bottom = 83.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btnCastillo" type="Button" parent="FiltroBloqueo/VBoxContainer" unique_id=1217461428]
+layout_mode = 2
+text = "Castillo"
+
+[node name="btnTrabajo" type="Button" parent="FiltroBloqueo/VBoxContainer" unique_id=1402434102]
+layout_mode = 2
+text = "Trabajo"
+
+[node name="btnTaberna" type="Button" parent="FiltroBloqueo/VBoxContainer" unique_id=1701129311]
+layout_mode = 2
+text = "Taberna"
+
+[node name="BtnCancelar" type="Button" parent="FiltroBloqueo/VBoxContainer" unique_id=495289157]
+layout_mode = 2
+text = "Cancerlar"
+
+[node name="ColorRect" type="ColorRect" parent="FiltroBloqueo" unique_id=2031405189]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=232111546]
+stream = ExtResource("4_75gpr")
+volume_db = -8.0
+autoplay = true
+parameters/looping = true
+
+[node name="UI_topbar" parent="." unique_id=1526306438 instance=ExtResource("2_rkwki")]
+
+[connection signal="pressed" from="btnPuerta" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="btnCofre" to="." method="_on_btn_cofre_pressed"]
+[connection signal="pressed" from="btnCama" to="." method="_on_btn_cama_pressed"]
+[connection signal="pressed" from="FiltroBloqueo/VBoxContainer/btnCastillo" to="." method="_on_btn_castillo_pressed"]
+[connection signal="pressed" from="FiltroBloqueo/VBoxContainer/BtnCancelar" to="." method="_on_btn_cancelar_pressed"]

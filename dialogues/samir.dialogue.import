@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b2lwr8ecnnpbf"
+path="res://.godot/imported/samir.dialogue-e44430a00a5ab73b35a722b561fc8ad0.tres"
+
+[deps]
+
+source_file="res://dialogues/samir.dialogue"
+dest_files=["res://.godot/imported/samir.dialogue-e44430a00a5ab73b35a722b561fc8ad0.tres"]
+
+[params]
+
+defaults=true

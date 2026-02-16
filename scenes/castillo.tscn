@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b4vqdmgepgoyt"]
+
+[ext_resource type="PackedScene" uid="uid://pxsietlmybvb" path="res://scenes/personajes/samir.tscn" id="1_jacxh"]
+[ext_resource type="Script" uid="uid://cmsnvk77j6qsi" path="res://scripts/castillo.gd" id="1_jhrjp"]
+[ext_resource type="Texture2D" uid="uid://8px0e2fv2782" path="res://img/castillo/castillo.png" id="2_jhrjp"]
+[ext_resource type="Texture2D" uid="uid://dc1uogtuu6cc8" path="res://img/castillo/camino castillo 2.png" id="3_s0bih"]
+
+[node name="Castillo" type="Node" unique_id=543716474 node_paths=PackedStringArray("samir", "react", "fade")]
+script = ExtResource("1_jhrjp")
+samir = NodePath("Samir")
+img_castillo = ExtResource("2_jhrjp")
+img_camino = ExtResource("3_s0bih")
+react = NodePath("Control/TextureRect")
+fade = NodePath("ColorRect")
+
+[node name="Control" type="Control" parent="." unique_id=70185106]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=368102270]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Samir" parent="." unique_id=1450011434 instance=ExtResource("1_jacxh")]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=704986857]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)

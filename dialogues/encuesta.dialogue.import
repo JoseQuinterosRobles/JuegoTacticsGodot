@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://btfdiqb6nagyn"
+path="res://.godot/imported/encuesta.dialogue-9ae12123dbd1834fde5ec8e287665b26.tres"
+
+[deps]
+
+source_file="res://dialogues/encuesta.dialogue"
+dest_files=["res://.godot/imported/encuesta.dialogue-9ae12123dbd1834fde5ec8e287665b26.tres"]
+
+[params]
+
+defaults=true

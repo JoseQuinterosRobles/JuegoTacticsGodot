@@ -1,0 +1,16 @@
+~ puerta
+{{Autoload.nombre_jugador}}: Ire a la ciudad
+do _mostrar_menu()
+=> END
+
+~ cofre
+{{Autoload.nombre_jugador}}: Veamos que guarde aqui
+=> END
+
+~ cama
+Sistema: ¿Quieres dormir?
+- Si
+	do siguienteDia()
+- No
+	{{Autoload.nombre_jugador}}: Aun hay cosas que debo hacer
+=> END

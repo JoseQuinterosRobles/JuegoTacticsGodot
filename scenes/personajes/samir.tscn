@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://pxsietlmybvb"]
+
+[ext_resource type="Script" uid="uid://ctoots0v74du6" path="res://scripts/samir.gd" id="1_pe6us"]
+[ext_resource type="Texture2D" uid="uid://mf757w0jpew6" path="res://img/characters/samir/caraFeliz.png" id="2_f5elk"]
+
+[node name="Samir" type="Node2D" unique_id=1450011434 node_paths=PackedStringArray("cara")]
+script = ExtResource("1_pe6us")
+cara = NodePath("Cara")
+
+[node name="Cara" type="Sprite2D" parent="." unique_id=405160770]
+position = Vector2(173, 203.99998)
+scale = Vector2(0.4, 0.44)
+texture = ExtResource("2_f5elk")

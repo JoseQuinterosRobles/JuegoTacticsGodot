@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" format=3 uid="uid://cr1gyts27wlxr"]
+
+[ext_resource type="Texture2D" uid="uid://dlq76k8ftspk6" path="res://tileSet/titleSets/pisoVerde.png" id="1_pltrg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kj674"]
+texture = ExtResource("1_pltrg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_kj674")

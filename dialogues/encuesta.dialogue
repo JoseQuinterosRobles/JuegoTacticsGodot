@@ -1,0 +1,89 @@
+~ start
+Sistema: Este juego es un piloto
+Sistema: El sistema de juegos es una aventura grafica que cuenta con minijuegos
+Sistema: deciciones y combates tacticos
+Sistema: ¿Quieres la explicación con detalles?
+- si
+	Sistema: Cuenta con un sistema de dados de 10 caras.
+	Sistema: Ciertas acciones pediran una tirada de dados con una dificultad
+	Sistema: Al lanzar los dados tus atributos y nivel de habilidad se sumaran
+	Sistema: a la cantidad de dados que lanzas, pero solo se sumaran
+	Sistema: los dados mas altos, la cantidad de dados guardados es igual a tu atributo
+	Sistema: Ejemplo: quieres romper una puerta. 
+	Sistema: si tu actitud fisica es 2 y tu habilidad de proeza de fuerza 2 lanzaras 4 dados y elegiras los dos mas altos,
+	Sistema: si los dados lanzados son 5,8,2,1 sumaras 13 (8+5)
+	
+- no
+	Sistema: Entonces comensemos con la encuesta
+
+Sistema: Primero ¿cual es tu nombre?
+do abrir_input_nombre()
+# Aquí el diálogo termina momentáneamente mientras el usuario escribe
+=> END
+
+
+~ preguntas
+Sistema: Mucho gusto joven {{Autoload.nombre_jugador}}
+
+Sistema: Vas caminando por la calle y un bandido te quiere robar, ¿como enfrentarias esa situación?
+- me defiendo y peleo con el
+	Sistema: Confias en tus musculos eh?
+	do subir_atributo_principal("cuerpo")
+	Sistema: Tu atributo cuerpo subio a {{Autoload.cuerpo}}
+- lo engaño y me desago de el
+	Sistema: Debes tener una mente agil para engañar en una situación asi
+	do subir_atributo_principal("mente")
+	Sistema: Tu atributo mente subio a {{Autoload.mente}}
+- lo convenzo de que no llevo nada
+	Sistema: Debes tener una gran labia para algo asi, pero lo veo posible
+	do subir_atributo_principal("mente")
+	Sistema: Tu atributo mente subio a {{Autoload.mente}}
+- busco ayudarlo a encontrar el camino
+	Sistema: No esperaba esa respuesta
+	do subir_atributo_principal("alma")
+	Sistema: Tu atributo alma subio a {{Autoload.alma}}
+
+
+Sistema: Estas en una colina, disfrutando la vista. ¿que ves?
+- Un campo de batalla
+	Sistema: Estas deseoso de demostrar tu valia
+	do subir_habilidad("proezaFuerza")
+	Sistema: Tu habilidad de proeza de fuera subio a {{Autoload.proezaFuerza}}
+- Un mundo del cual aprender
+	Sistema: Una persona curiosa, cada día deberiamos aprender algo nuevo
+	do subir_habilidad("conocimientos")
+	Sistema: Tu habilidad de conocimientos subio a {{Autoload.conocimientos}}
+- Personas disfrutando su dia
+	Sistema: Siempre esta bien disfrutar el dia
+	do subir_habilidad("labia")
+	Sistema: Tu habilidad de labia subio a {{Autoload.labia}}
+- Una carnaval para jugar
+	Sistema: Espero hayas ganado algun premio en los juegos
+	do subir_habilidad("DestrezaManual")
+	Sistema: Tu habilidad de DestrezaManual subio a {{Autoload.DestrezaManual}}
+- Un misterio por resolver
+	Sistema:¡La aventura y la curiosidad la razón de ser de un aventurero!
+	do subir_habilidad("percepcion")
+	Sistema: Tu habilidad de percepcion subio a {{Autoload.percepcion}}
+
+Sistema: Última pregunta. ¿A que raza perteneces?
+- Humano
+	do asignar_raza("Humano")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Hombre bestia
+	do asignar_raza("Hombre bestia")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Elfo
+	do asignar_raza("Elfo")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Semi elfo
+	do asignar_raza("Semi elfo")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Demonio
+	do asignar_raza("Demonio")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+- Enano
+	do asignar_raza("Enano")
+	Sistema: Tu raza es {{Autoload.raza_jugador}}
+Sistema: Con todo esto, te doy la bienvenida a esta aventura, tu inicio ser la ciudad de Sarin
+do inicio()

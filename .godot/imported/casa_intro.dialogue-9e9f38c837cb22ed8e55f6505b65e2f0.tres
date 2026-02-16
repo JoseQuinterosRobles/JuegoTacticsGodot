@@ -1,0 +1,212 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_c1qeb"]
+
+[resource]
+script = ExtResource("1_c1qeb")
+using_states = PackedStringArray()
+titles = {
+"cama": "10",
+"cofre": "6",
+"puerta": "1"
+}
+character_names = PackedStringArray("{{Autoload.nombre_jugador}}", "Sistema")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "{{Autoload.nombre_jugador}}",
+&"character_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 2,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 10,
+&"type": &"dot"
+}, {
+&"i": 11,
+&"type": &"variable",
+&"value": "nombre_jugador"
+}]),
+&"value_in_text": "{{Autoload.nombre_jugador}}"
+}]),
+&"id": "1",
+&"next_id": "2",
+&"text": "Ire a la ciudad",
+&"type": "dialogue"
+},
+"10": {
+&"character": "Sistema",
+&"id": "10",
+&"next_id": "11",
+&"text": "¿Quieres dormir?",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"next_id": "12",
+&"responses": PackedStringArray("11", "13"),
+&"text": "Si",
+&"type": "response"
+},
+"12": {
+&"id": "12",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "siguienteDia",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 16,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "15",
+&"type": "mutation"
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"text": "No",
+&"type": "response"
+},
+"14": {
+&"character": "{{Autoload.nombre_jugador}}",
+&"character_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 3,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 11,
+&"type": &"dot"
+}, {
+&"i": 12,
+&"type": &"variable",
+&"value": "nombre_jugador"
+}]),
+&"value_in_text": "{{Autoload.nombre_jugador}}"
+}]),
+&"id": "14",
+&"next_id": "15",
+&"text": "Aun hay cosas que debo hacer",
+&"type": "dialogue"
+},
+"15": {
+&"id": "15",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"16": {
+&"id": "16",
+&"next_id": "17",
+&"type": ""
+},
+"17": {
+&"id": "17",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "_mostrar_menu",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 17,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "3",
+&"type": "mutation"
+},
+"3": {
+&"id": "3",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"4": {
+&"id": "4",
+&"next_id": "5",
+&"type": ""
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"type": "title"
+},
+"6": {
+&"character": "{{Autoload.nombre_jugador}}",
+&"character_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"i": 2,
+&"type": &"variable",
+&"value": "Autoload"
+}, {
+&"i": 10,
+&"type": &"dot"
+}, {
+&"i": 11,
+&"type": &"variable",
+&"value": "nombre_jugador"
+}]),
+&"value_in_text": "{{Autoload.nombre_jugador}}"
+}]),
+&"id": "6",
+&"next_id": "7",
+&"text": "Veamos que guarde aqui",
+&"type": "dialogue"
+},
+"7": {
+&"id": "7",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"type": ""
+},
+"9": {
+&"id": "9",
+&"next_id": "10",
+&"type": "title"
+}
+}
+raw_text = "~ puerta
+{{Autoload.nombre_jugador}}: Ire a la ciudad
+do _mostrar_menu()
+=> END
+
+~ cofre
+{{Autoload.nombre_jugador}}: Veamos que guarde aqui
+=> END
+
+~ cama
+Sistema: ¿Quieres dormir?
+- Si
+	do siguienteDia()
+- No
+	{{Autoload.nombre_jugador}}: Aun hay cosas que debo hacer
+=> END
+"
+metadata/dialogue_manager_version = "3.9.1"

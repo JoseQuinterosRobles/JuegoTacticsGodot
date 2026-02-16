@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://d8ll2eln05ro"]
+
+[ext_resource type="Texture2D" uid="uid://bus8xfc3bmhjb" path="res://img/menuprincipal.png" id="1_i85hu"]
+[ext_resource type="Script" uid="uid://dr0drbmbjhacg" path="res://scripts/menu_principal.gd" id="1_mk4g1"]
+[ext_resource type="AudioStream" uid="uid://cbykvw8c7u5ui" path="res://music/Intro.mp3" id="3_486ty"]
+[ext_resource type="AudioStream" uid="uid://c15lep8ruc5w4" path="res://music/dados.mp3" id="4_w5ui5"]
+
+[node name="MenuPrincipal" type="Control" unique_id=53925608 node_paths=PackedStringArray("SFXintro")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mk4g1")
+SFXintro = NodePath("inicioSFX")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=273730473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i85hu")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1657302568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btnNuevoJuego" type="Button" parent="VBoxContainer" unique_id=255210973]
+layout_mode = 2
+text = "Nuevo juego"
+
+[node name="btnCargar" type="Button" parent="VBoxContainer" unique_id=1417774440]
+layout_mode = 2
+text = "Cargar"
+
+[node name="btnOpciones" type="Button" parent="VBoxContainer" unique_id=930265536]
+layout_mode = 2
+text = "Opciones"
+
+[node name="btnSalir" type="Button" parent="VBoxContainer" unique_id=158597255]
+layout_mode = 2
+text = "Salir"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1042516354]
+stream = ExtResource("3_486ty")
+autoplay = true
+parameters/looping = true
+
+[node name="inicioSFX" type="AudioStreamPlayer2D" parent="." unique_id=49349454]
+stream = ExtResource("4_w5ui5")
+volume_db = -8.0
+
+[connection signal="pressed" from="VBoxContainer/btnNuevoJuego" to="." method="_on_btn_nuevo_juego_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnCargar" to="." method="_on_btn_cargar_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnOpciones" to="." method="_on_btn_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnSalir" to="." method="_on_btn_salir_pressed"]

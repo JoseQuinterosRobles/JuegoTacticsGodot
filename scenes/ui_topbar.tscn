@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cvg3ostnti6mi"]
+
+[ext_resource type="Script" uid="uid://c2x1s6p4vbigp" path="res://scripts/ui_topbar.gd" id="1_sj21r"]
+
+[node name="UI_topbar" type="CanvasLayer" unique_id=1526306438 node_paths=PackedStringArray("dia_label", "actions_label", "mes_label", "nombre_label", "raza_jugador")]
+script = ExtResource("1_sj21r")
+dia_label = NodePath("Panel/BoxCalendario/Dia")
+actions_label = NodePath("Panel/BoxCalendario/Acciones")
+mes_label = NodePath("Panel/BoxCalendario/Mes")
+nombre_label = NodePath("Panel/BoxPersonaje/NombreJugador")
+raza_jugador = NodePath("Panel/BoxPersonaje/RazaJugador")
+
+[node name="Panel" type="Panel" parent="." unique_id=1114325623]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="BoxCalendario" type="HBoxContainer" parent="Panel" unique_id=391395731]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Dia" type="Label" parent="Panel/BoxCalendario" unique_id=1477852]
+layout_mode = 2
+
+[node name="Mes" type="Label" parent="Panel/BoxCalendario" unique_id=425239942]
+layout_mode = 2
+
+[node name="Acciones" type="Label" parent="Panel/BoxCalendario" unique_id=834339823]
+layout_mode = 2
+
+[node name="BoxPersonaje" type="VBoxContainer" parent="Panel" unique_id=761299288]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NombreJugador" type="Label" parent="Panel/BoxPersonaje" unique_id=1404845307]
+layout_mode = 2
+
+[node name="RazaJugador" type="Label" parent="Panel/BoxPersonaje" unique_id=1439626159]
+layout_mode = 2

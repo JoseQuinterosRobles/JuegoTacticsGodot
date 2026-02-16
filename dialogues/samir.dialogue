@@ -1,0 +1,21 @@
+~ entradaCastillo
+do Fade.set_img(react,"res://img/castillo/camino castillo 2.png")
+{{Autoload.nombre_jugador}}: (que querra el rey...)
+{{Autoload.nombre_jugador}}: (ya puedo ver al rey)
+=> castillo
+
+~ castillo
+do Fade.set_img(react,"res://img/castillo/castillo.png")
+Rey: {{Autoload.nombre_jugador}}, te presento a Samir, una emisaria de mas alla de los muros, dice venir en nombre de su señor
+Rey: Al parecer ellos tienen un metodo para poder viajar al mundo exterior sin perder la razón
+Rey: Como acto de buena voluntad entre las dos partes te pido que acompañes a la emisaria
+Rey: Tu misión sera cartografiar el camino apoyar en lo que se te pida 
+do Fade.reveal_from_black(samir) 
+Samir: Mucho gusto {{Autoload.nombre_jugador}}, como dice el rey, soy Samir hija de la noche
+Samir: El rey me conto de tus habilidades como estratega y de tu pasatiempo como cartografo
+Samir: Me gustaria que nos conozcamos mas y poder ver tus habilidades
+do samir.invisible():
+{{Autoload.nombre_jugador}}: Mi rey, emisaria Samir. Espero estar a la altura de sus espectativas
+Pensamiento: (¿Entonces ella sera quien trajo esas cosas que se ven desde la muralla?)
+=> END
+
