@@ -1,2 +1,4 @@
-res://scripts/castillo.gd
-res://scripts/fade_manager.gd
+res://tileSet/colores.tres
+res://scripts/menu_principal.gd
+res://scripts/mundo.gd
+res://scenes/mundo.tscn
